@@ -59,10 +59,11 @@ y' = y / z
 
 Ceci est utilisé dans la fonction getScreenCoordinates() a l'interieure de Line.cpp :
 ```c++
-float px1 = (newStart.x / newStart.z) * focalLength;
+// Ne vous préocupez pas de focalLength, j'en parle dans la partie rotation
+float px1 = (newStart.x / newStart.z) * focalLength; // Début de la ligne
 float py1 = (newStart.y / newStart.z) * focalLength;
 
-float px2 = (newEnd.x / newEnd.z) * focalLength;
+float px2 = (newEnd.x / newEnd.z) * focalLength; // Fin de la ligne
 float py2 = (newEnd.y / newEnd.z) * focalLength;
 ```
 </details>
