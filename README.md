@@ -52,7 +52,6 @@ A noter : contrairement a la 3d cela ne change jamais
 Pour passer de la 3d à la 2d on divise x et y par z
 
 x' = x / z
-
 y' = y / z
 
 (ici x' et y' sonts les coordonées en 2d)
