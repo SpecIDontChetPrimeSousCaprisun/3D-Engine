@@ -3,10 +3,12 @@
 (Je m'éscuse en avance pour mon orthographe désastreuse)
 Ce projet a été fait en 2026 pour l'école de la transition pendant la periode sur le thème du japon.
 Malgrés le manque de rapport entre le thème et le projet j'ai quand mème eu le droit de le faire.
+Certaines parties du projet on été coder a l'aide de l'IA mais j'ai codé la majoritée.
 
 ### English
 This project was made in 2026 for l'Ecole De La Transition (a french college) durong a period on the theme of japan. 
 I was able to make this project even with the lack of coherence between the theme and the project.
+Some parts of this project may be vibe coded but i coded most of it.
 
 ## Controlles / Controls
 ### Francais
