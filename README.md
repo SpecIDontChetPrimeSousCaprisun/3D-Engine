@@ -58,13 +58,13 @@ y' = y / z
 (ici x' et y' sonts les coordonées en 2d)
 
 Ceci est utilisé dans la fonction getScreenCoordinates() a l'interieure de Line.cpp :
-'''c++
+```c++
 float px1 = (newStart.x / newStart.z) * focalLength;
 float py1 = (newStart.y / newStart.z) * focalLength;
 
 float px2 = (newEnd.x / newEnd.z) * focalLength;
 float py2 = (newEnd.y / newEnd.z) * focalLength;
-'''
+```
 </details>
 
 ## Pour les gens venant de l'école
