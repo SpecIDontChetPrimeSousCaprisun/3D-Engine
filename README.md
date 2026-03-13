@@ -71,6 +71,7 @@ float py2 = (newEnd.y / newEnd.z) * focalLength;
 <details>
 <summary>La rotation en 3D</summary>
 L'équation de la rotation en 3D est la suivante :
+
   
 y = y * cos(angle) - z * sin(angle)
 
