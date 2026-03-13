@@ -51,7 +51,8 @@ A noter : contrairement a la 3d cela ne change jamais
 
 Pour passer de la 3d à la 2d on divise x et y par z
 
-x' = x / z\n
+x' = x / z
+
 y' = y / z
 
 (ici x' et y' sonts les coordonées en 2d)
@@ -65,6 +66,11 @@ float py1 = (newStart.y / newStart.z) * focalLength;
 float px2 = (newEnd.x / newEnd.z) * focalLength; // Fin de la ligne
 float py2 = (newEnd.y / newEnd.z) * focalLength;
 ```
+</details>
+
+<details>
+<summary>La rotation en 3D</summary>
+  
 </details>
 
 ## Pour les gens venant de l'école
