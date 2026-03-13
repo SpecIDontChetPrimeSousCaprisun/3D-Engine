@@ -9,8 +9,22 @@ I was able to make this project even with the lack of coherence between the them
 
 ## Controlles / Controls
 ### Francais
+Z = avancer tout droit
+S = reculer
+Q = aller a guauche
+D = aller a droite
+Alt = vérouiller / déverouiller la souris
+
+La caméra est bougée par la souris
 
 ### English
+Z = forwards
+S = backwards
+Q = go left
+D = go right
+Alt = Lock / unlock mouse
+
+The camera is controlled by the mouse
 
 ## Pour les gens voulant utiliser le projet pour apprendre / For people who want to use this project to learn
 
