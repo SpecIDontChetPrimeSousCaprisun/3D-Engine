@@ -34,9 +34,25 @@ Vous pouvez parcontre l'utilizer pour apprendre les mathématiques autour de la 
 
 <details>
 <summary>Comment passer de la 3D à la 2D (comment afficher des points 3d sur l'écran)</summary>
+En 3D il y a 3 coordonées : x, y, z
+x étant l'horizontale
+y étant la hauteur
+et z étant la profondeur
 
-PLACEHOLDER
+A noter : en fonction de la rotation cette perspéctive peut changer
 
+En 2d (et donc sur l'écran) il y à 2 coordonées : x, y
+x étant l'horizontale
+y étant la verticale
+
+A noter : contrairement a la 3d cela ne change jamais
+
+Pour passer de la 3d à la 2d on divise x et y par z
+
+x' = x / z
+y' = y / z
+
+(ici x' et y' sonts les coordonées en 2d)
 </details>
 
 ## Pour les gens venant de l'école
