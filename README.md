@@ -28,6 +28,16 @@ Alt = Lock / unlock mouse
 The camera is controlled by the mouse
 
 ## Pour les gens voulant utiliser le projet pour apprendre / For people who want to use this project to learn
+### Francais
+JE NE RECOMMANDE ABSOLUMENT PAS D'UTILISER CE PROJET POUR APPRENDRE A CODER EN C++.
+Vous pouvez parcontre l'utilizer pour apprendre les mathématiques autour de la 3D.
+
+<details>
+<summary>Comment passer de la 3D à la 2D (comment afficher des points 3d sur l'écran)</summary>
+
+PLACEHOLDER
+
+</details>
 
 ## Pour les gens venant de l'école
 Ce projet est donc le projet d'informatique de la periode. Les autres projets étant : 
