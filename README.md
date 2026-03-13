@@ -71,10 +71,39 @@ float py2 = (newEnd.y / newEnd.z) * focalLength;
 <details>
 <summary>La rotation en 3D</summary>
 L'équation de la rotation en 3D est la suivante :
+  
 y = y * cos(angle) - z * sin(angle)
+
 z = z * sin(angle) - z * cos(angle)
 
+A noter : Ceci est l'équation pour la rotation d'axe X pour faire tourner sur un axe l'équation n'utilize jamais sa coordonée. 
 
+L'angle est en radiant mais l'unitée d'angle la plus utilisée est le degré nous devons donc le transformer :
+
+radiants = degrés * (pi / 180)
+
+voici se que cela donne en code : 
+```c++
+float rads = angle * (M_PI / 180.0);
+```
+
+Si vous avez regardé la partie pour passer de la 3D a la 2D vous avez peut etre remarqué la distance focale (ou focalLength), elle est la pour augmanter la valeur de Z (dans notre cas nous passon de 1 à 200) car l'équation ne marche pas bien quand une valeure est trop petite.
+
+voici un éxemple de la fonction Vec3::rotateX() dans Line.cpp :
+```c++
+void Vec3::rotateX(float angle) {
+    float rads = angle * (M_PI / 180.0); // conversion de degrés a radiants
+
+    float c = std::cos(rads); // nous calculons le cosinus et le sinus de l'angle en avance pour un peutit peus d'optimisation
+    float s = std::sin(rads);
+
+    float oldY = y; // nous devons être sûr d'utiliser les anciennes variables et pas celles modifiés par l'équasion
+    float oldZ = z;
+
+    y = oldY * c - oldZ * s; // l'équasion en elle même (autour de l'axe X)
+    z = oldY * s + oldZ * c;
+}
+```
 </details>
 
 ## Pour les gens venant de l'école
