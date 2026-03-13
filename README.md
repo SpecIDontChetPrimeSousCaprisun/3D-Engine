@@ -74,7 +74,6 @@ L'équation de la rotation en 3D est la suivante :
 
   
 y = y * cos(angle) - z * sin(angle)
-
 z = z * sin(angle) - z * cos(angle)
 
 
