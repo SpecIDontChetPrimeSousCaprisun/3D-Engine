@@ -76,7 +76,7 @@ y = y * cos(angle) - z * sin(angle)
 
 z = z * sin(angle) - z * cos(angle)
 
-A noter : Ceci est l'équation pour la rotation d'axe X pour faire tourner sur un axe l'équation n'utilize jamais sa coordonée. 
+A noter : Ceci est l'équation pour la rotation d'axe X pour faire tourner sur un axe l'équation n'utilize jamais sa propre coordonée. 
 
 L'angle est en radiant mais l'unitée d'angle la plus utilisée est le degré nous devons donc le transformer :
 
@@ -105,6 +105,8 @@ void Vec3::rotateX(float angle) {
 }
 ```
 </details>
+
+[Une video pour vous aider à mieux comprendre (c'est en anglais par contre)](https://www.youtube.com/watch?v=qjWkNZ0SXfo)
 
 ### English
 I ABSOLUTELY DO NOT RECOMMEND USING THIS PROJECT FOR LEARNING C++.
@@ -137,14 +139,53 @@ You can use it to learn 3D maths though.
 
   This is used in the function getScreenCoordinates() in Line.cpp :
   ```c++
-  // Ne vous préocupez pas de focalLength, j'en parle dans la partie rotation
-  float px1 = (newStart.x / newStart.z) * focalLength; // Début de la ligne
+  // Don't worry about focalLength i talk about it later in the Rotation part
+  float px1 = (newStart.x / newStart.z) * focalLength; // Start of the line
   float py1 = (newStart.y / newStart.z) * focalLength;
   
-  float px2 = (newEnd.x / newEnd.z) * focalLength; // Fin de la ligne
+  float px2 = (newEnd.x / newEnd.z) * focalLength; // End of the line
   float py2 = (newEnd.y / newEnd.z) * focalLength;
   ```
 </details>
+
+<details>
+  <summary>Rotation in 3d</summary>
+  The 3D rotation equation is the following :
+
+  y = y * cos(angle) - z * sin(angle)
+
+  z = z * sin(angle) - z * cos(angle)
+
+  Note : This is the equation to rotate around the X axis to rotate around an axis the equation never include it.
+
+  The angle is in randians but we want to use degrees so we have to convert :
+
+  radians = degrees * (pi / 180)
+  
+  here is what it looks like in the code : 
+  ```c++
+  float rads = angle * (M_PI / 180.0);
+  ```
+  If you have read the part about turning from 3D to 2D you might have seen the focal length it is here to make Z bigger (from 1 to 200 in our case) this   is because the equation breaks when it is fed with tiny values.
+
+  Here is an example from the function Vec3::rotateX() in Line.cpp :
+  ```c++
+  void Vec3::rotateX(float angle) {
+      float rads = angle * (M_PI / 180.0); // conversion de degrés a radiants
+  
+      float c = std::cos(rads); // nous calculons le cosinus et le sinus de l'angle en avance pour un peutit peus d'optimisation
+      float s = std::sin(rads);
+  
+      float oldY = y; // nous devons être sûr d'utiliser les anciennes variables et pas celles modifiés par l'équasion
+      float oldZ = z;
+  
+      y = oldY * c - oldZ * s; // l'équasion en elle même (autour de l'axe X)
+      z = oldY * s + oldZ * c;
+  }
+  ```
+</details>
+
+[Actual good learning source](https://www.youtube.com/watch?v=qjWkNZ0SXfo)
 
 ## Pour les gens venant de l'école
 Ce projet est donc le projet d'informatique de la periode. Les autres projets étant : 
