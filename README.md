@@ -106,6 +106,46 @@ void Vec3::rotateX(float angle) {
 ```
 </details>
 
+### English
+I ABSOLUTELY DO NOT RECOMMEND USING THIS PROJECT FOR LEARNING C++.
+You can use it to learn 3D maths though.
+
+<details>
+  <summary>How to go from 3D to 2D (how to go from 3D to screen coordinates)</summary>
+  In 3d there are three coordinates : x, y, z
+
+  x being horizontal,
+  y being height,
+  and z being depth
+
+  Note : This perspective might change depending on the rotation.
+
+  In 2d (screen coordinates) there are two coordinates : x, y
+
+  x being horizontal
+  and y being vertical
+
+  Note : contrarly to 3d this never changes.
+
+  To go from 3d to 2d you have to divide x and y by z :
+
+  x' = x / z
+
+  y' = y / z
+
+  (here x' and y' are the 2d coordinates)
+
+  This is used in the function getScreenCoordinates() in Line.cpp :
+  ```c++
+  // Ne vous préocupez pas de focalLength, j'en parle dans la partie rotation
+  float px1 = (newStart.x / newStart.z) * focalLength; // Début de la ligne
+  float py1 = (newStart.y / newStart.z) * focalLength;
+  
+  float px2 = (newEnd.x / newEnd.z) * focalLength; // Fin de la ligne
+  float py2 = (newEnd.y / newEnd.z) * focalLength;
+  ```
+</details>
+
 ## Pour les gens venant de l'école
 Ce projet est donc le projet d'informatique de la periode. Les autres projets étant : 
 - Projet d'art
