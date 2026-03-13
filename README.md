@@ -82,12 +82,12 @@ L'angle est en radiant mais l'unitée d'angle la plus utilisée est le degré no
 
 radiants = degrés * (pi / 180)
 
-voici se que cela donne en code : 
+voici ce que cela donne en code : 
 ```c++
 float rads = angle * (M_PI / 180.0);
 ```
 
-Si vous avez regardé la partie pour passer de la 3D a la 2D vous avez peut etre remarqué la distance focale (ou focalLength), elle est la pour augmanter la valeur de Z (dans notre cas nous passon de 1 à 200) car l'équation ne marche pas bien quand une valeure est trop petite.
+Si vous avez regardé la partie pour passer de la 3D a la 2D vous avez peut etre remarqué la distance focale (ou focalLength), elle est la pour augmenter la valeur de Z (dans notre cas nous passon de 1 à 200) car l'équation ne marche pas bien quand une valeure est trop petite.
 
 voici un éxemple de la fonction Vec3::rotateX() dans Line.cpp :
 ```c++
