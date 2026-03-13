@@ -1,6 +1,3 @@
-//
-// Created by chevre on 2/12/26.
-//
 #include "Window.h"
 #include <SFML/Graphics.hpp>
 #include <algorithm>
