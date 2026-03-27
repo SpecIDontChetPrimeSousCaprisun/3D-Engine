@@ -12,11 +12,13 @@ add_executable(3DEngine main.cpp
         Window.cpp
         Mesh.h
         Mesh.cpp
-        Gradient.cpp
         ImportManager.cpp
         ImportManager.h
         BaseShapes.cpp
-        BaseShapes.h)
+        BaseShapes.h
+        UpdateManager.cpp
+        UpdateManager.h
+        UpdateManager.h)
 
 target_link_libraries(3DEngine PRIVATE
         SFML::Graphics
